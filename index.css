@@ -65,8 +65,11 @@ p {
     border-radius: 5px;
     border: 1px solid #ccc;
     outline: none;
+    resize: none
 }
-
+.choose-group textarea {
+    height: 100px;
+}
  input.invalid,
  textarea.invalid {
     border-color: red;
