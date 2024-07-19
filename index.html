@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png"/>
+  <title>Frontend Metor | Contact form</title>
+</head>
+<body>
+    <section class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" class="form" action="#" method="POST">
+            <div class="column">
+              <div class="input-box">
+                <label>First Name</label>
+                <p>*</p>
+                <input type="text" id="firstName" name="firstName">
+                <span class="error-message">This field is required</span>
+              </div>
+
+              <div class="input-box">
+                <label>Last Name</label>
+                <p>*</p>
+                <input type="text" id="lastName" name="lastName">
+                <span class="error-message">This field is required</span>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <label>Email Address</label>
+              <p>*</p>
+              <input type="email" id="email" name="email">
+              <span class="error-message">Please enter a valid email address</span>
+            </div>
+
+            <div class="choose-group">
+              <label>Query type</label>
+              <p>*</p>
+              <div class="radio-buttons">
+                  <div class="border-radio">
+                      <label>
+                          <input type="radio" name="query" value="general"> <span>General Enquiry</span>
+                      </label>
+                  </div>
+                  <div class="border-radio">
+                      <label>
+                        <input type="radio" name="query" value="support"> <span>Support Request</span>
+                      </label>
+                  </div>
+              </div>
+              <span class="error-message">Please select a query type</span>
+            </div>
+
+            <div class="choose-group">
+                <label>Message</label>
+                <p>*</p>
+                <textarea style="resize: none; height: 100px;" name="message"></textarea>
+                <span class="error-message">This field is required</span>
+            </div>
+
+            <div class="choose-group">
+                <label>
+                  <input type="checkbox" id="consent" name="consent"> <span>I consent to being contacted by the team *</span>
+                </label>
+                <span class="error-message">To submit this form, please consent to being contacted</span>
+            </div>
+              
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
