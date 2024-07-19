@@ -1,7 +1,7 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     var isValid = true;
 
-    // Kiểm tra các ô input và textarea
+    //Checking Input and Textarea Fields
     var inputs = document.querySelectorAll('#contactForm input[type="text"], #contactForm input[type="email"], #contactForm textarea');
     inputs.forEach(function(input) {
         if (!input.value) {
@@ -14,7 +14,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         }
     });
 
-    // Kiểm tra các ô radio
+    // Checking radio buttons
     var radioGroups = document.querySelectorAll('.radio-buttons');
     radioGroups.forEach(function(group) {
         var radios = group.querySelectorAll('input[type="radio"]');
@@ -32,7 +32,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         }
     });
 
-    // Kiểm tra checkbox
+    // Checking checkbox
     var consentCheckbox = document.getElementById('consent');
     if (!consentCheckbox.checked) {
         consentCheckbox.parentElement.classList.add('invalid');
@@ -43,7 +43,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         consentCheckbox.parentElement.nextElementSibling.style.display = 'none';
     }
 
-    // Ngăn chặn gửi biểu mẫu nếu có lỗi
+    // Preventing form submission if invalid
     if (!isValid) {
         event.preventDefault();
     }
